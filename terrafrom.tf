@@ -42,7 +42,7 @@ resource "azurerm_synapse_workspace" "example" {
   aad_admin {
     login     = "AzureAD Admin"
     object_id = "00000000-0000-0000-0000-000000000000"
-    tenant_id = "00000000-0000-0000-0000-000000000000"
+    tenant_id = "00000000-0000-0000-0000-000000000001"
   }
 
   identity {
