@@ -8,7 +8,12 @@ terraform {
 }
 
 provider "azurerm" {
-  # Configuration options
+  features {}
+
+  subscription_id   = "2bd92727-1a9b-4d70-b27d-e3de734c45a8"
+  tenant_id         = "6f1a44dc-99c5-462d-b27d-4a6926a6b3e0"
+  client_id         = "acf5f505-5481-4682-9ecb-a0d48eb01984"
+  client_secret     = "TPL8Q~SszJUJNq8D1WF2Im9Y7roUXPNGnmPGmcoq"
 }
 
 resource "azurerm_resource_group" "example" {
@@ -39,15 +44,7 @@ resource "azurerm_synapse_workspace" "example" {
   sql_administrator_login              = "sqladminuser"
   sql_administrator_login_password     = "H@Sh1CoR3!"
 
-  aad_admin {
-    login     = "AzureAD Admin"
-    object_id = "00000000-0000-0000-0000-000000000000"
-    tenant_id = "00000000-0000-0000-0000-000000000001"
-  }
 
-  identity {
-    type = "SystemAssigned"
-  }
 
   tags = {
     Application = "RFR"
