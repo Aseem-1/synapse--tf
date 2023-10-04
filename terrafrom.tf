@@ -42,7 +42,7 @@ resource "azurerm_synapse_workspace" "example" {
   sql_administrator_login_password     = "H@Sh1CoR3!"
 
 
-/*
+
   tags = {
     Application = "RFR"
     CostCentre = "A1D2675"
@@ -54,3 +54,4 @@ resource "azurerm_synapse_workspace" "example" {
   }
   
 }
+*/
