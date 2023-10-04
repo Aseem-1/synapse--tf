@@ -10,10 +10,6 @@ terraform {
 provider "azurerm" {
   features {}
 
-    ARM_CLIENT_ID = secrets.AZURE_AD_CLIENT_ID 
-    ARM_CLIENT_SECRET = secrets.CLIENT_SECRET 
-    ARM_SUBSCRIPTION_ID = secrets.AZURE_SUBSCRIPTION_ID
-    ARM_TENANT_ID = secrets.AZURE_AD_TENANT_ID
 }
 
 resource "azurerm_resource_group" "example" {
@@ -45,7 +41,7 @@ resource "azurerm_synapse_workspace" "example" {
   sql_administrator_login_password     = "H@Sh1CoR3!"
 
 
-
+/*
   tags = {
     Application = "RFR"
     CostCentre = "A1D2675"
@@ -53,6 +49,6 @@ resource "azurerm_synapse_workspace" "example" {
     Environment = "PP"
     Owner = "David Pitty"
     WBS = "A1RDP000931148"
-
+*/
   }
 }
