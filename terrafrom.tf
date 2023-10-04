@@ -9,8 +9,12 @@ terraform {
 
 provider "azurerm" {
   features {}
+  }
 
-}
+  provider "azurerm" {
+  subscription_id = var.subscription_id
+  tenant_id = var.azure_tenant_id
+    }
 
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
