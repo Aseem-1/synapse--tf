@@ -26,11 +26,12 @@ resource "azurerm_storage_account" "example" {
   account_kind             = "StorageV2"
   is_hns_enabled           = "true"
 }
-
+/*
 resource "azurerm_storage_data_lake_gen2_filesystem" "example" {
   name               = "example"
   storage_account_id = azurerm_storage_account.example.id
 }
+*/
 
 resource "azurerm_synapse_workspace" "example" {
   name                                 = "example"
@@ -49,6 +50,7 @@ resource "azurerm_synapse_workspace" "example" {
     Environment = "PP"
     Owner = "David Pitty"
     WBS = "A1RDP000931148"
-*/
+
   }
+  */
 }
