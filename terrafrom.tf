@@ -9,11 +9,11 @@ terraform {
 
 provider "azurerm" {
   features {}
-  
-    ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
-    ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-    ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-    ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
+
+    ARM_CLIENT_ID = secrets.AZURE_AD_CLIENT_ID 
+    ARM_CLIENT_SECRET = secrets.CLIENT_SECRET 
+    ARM_SUBSCRIPTION_ID = secrets.AZURE_SUBSCRIPTION_ID
+    ARM_TENANT_ID = secrets.AZURE_AD_TENANT_ID
 }
 
 resource "azurerm_resource_group" "example" {
