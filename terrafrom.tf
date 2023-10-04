@@ -52,5 +52,5 @@ resource "azurerm_synapse_workspace" "example" {
     WBS = "A1RDP000931148"
 
   }
-  */
+  
 }
