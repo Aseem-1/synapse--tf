@@ -9,6 +9,7 @@ terraform {
 
 provider "azurerm" {
   # Configuration options
+    creds: ${{ secrets.AZURE_CREDENTIALS }}
 }
 
 resource "azurerm_resource_group" "example" {
