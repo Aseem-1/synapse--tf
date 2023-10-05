@@ -14,15 +14,13 @@ provider "azurerm" {
   }
 
 
-
-
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
   location = "UK South"
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "examplestorageacc"
+  name                     = "examplestorageaccount578"
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
@@ -30,7 +28,7 @@ resource "azurerm_storage_account" "example" {
   account_kind             = "StorageV2"
   is_hns_enabled           = "true"
 }
-/*
+
 resource "azurerm_storage_data_lake_gen2_filesystem" "example" {
   name               = "example"
   storage_account_id = azurerm_storage_account.example.id
@@ -38,14 +36,16 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "example" {
 
 
 resource "azurerm_synapse_workspace" "example" {
-  name                                 = "example"
+  name                                 = "example777908"
   resource_group_name                  = azurerm_resource_group.example.name
   location                             = azurerm_resource_group.example.location
   storage_data_lake_gen2_filesystem_id = azurerm_storage_data_lake_gen2_filesystem.example.id
   sql_administrator_login              = "sqladminuser"
   sql_administrator_login_password     = "H@Sh1CoR3!"
 
-
+ identity {
+    type = "SystemAssigned"
+  }
 
   tags = {
     Application = "RFR"
