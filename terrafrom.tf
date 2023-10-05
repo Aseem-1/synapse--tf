@@ -58,4 +58,4 @@ resource "azurerm_synapse_workspace" "example" {
   }
   
 }
-*/
+
