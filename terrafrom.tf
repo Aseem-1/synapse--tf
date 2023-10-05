@@ -19,6 +19,7 @@ resource "azurerm_resource_group" "example" {
   location = "UK South"
 }
 
+
 resource "azurerm_storage_account" "example" {
   name                     = "examplestorageaccount578"
   resource_group_name      = azurerm_resource_group.example.name
@@ -43,7 +44,6 @@ resource "azurerm_synapse_workspace" "example777908" {
   sql_administrator_login              = "sqladminuser"
   sql_administrator_login_password     = "H@Sh1CoR3!"
   managed_virtual_network_enabled      = true
-
 
 
  identity {
