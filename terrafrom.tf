@@ -16,7 +16,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
-  location = "UK South"
+  location = var.location
 }
 
 
@@ -41,8 +41,8 @@ resource "azurerm_synapse_workspace" "example777908" {
   resource_group_name                  = azurerm_resource_group.example.name
   location                             = azurerm_resource_group.example.location
   storage_data_lake_gen2_filesystem_id = azurerm_storage_data_lake_gen2_filesystem.example.id
-  sql_administrator_login              = "sqladminuser"
-  sql_administrator_login_password     = "H@Sh1CoR3!"
+  sql_administrator_login              = var.sql_administrator_login
+  sql_administrator_login_password     = var.sql_administrator_login_password
   managed_virtual_network_enabled      = true
 
 
