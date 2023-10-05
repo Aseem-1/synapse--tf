@@ -43,6 +43,14 @@ resource "azurerm_synapse_workspace" "example" {
   sql_administrator_login              = "sqladminuser"
   sql_administrator_login_password     = "H@Sh1CoR3!"
 
+resource "azurerm_synapse_sql_pool" "anprdevsqlpool" {
+  name                 = "anprdevsqlpool"
+  synapse_workspace_id = azurerm_synapse_workspace.example.id
+  sku_name             = "DW100c"
+  create_mode          = "Default"
+  storage_account_type = "GRS"
+}
+
  identity {
     type = "SystemAssigned"
   }
