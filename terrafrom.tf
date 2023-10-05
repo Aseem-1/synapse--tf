@@ -51,11 +51,11 @@ resource "azurerm_synapse_workspace" "example" {
 
   tags = {
     Application = "RFR"
-    CostCentre = "A1D2675"
+    CostCentre = ""
     Createby = "Aseem.Suleman@met.police.uk"
     Environment = "PP"
     Owner = "David Pitty"
-    WBS = "A1RDP000931148"
+    WBS = ""
 
   }
   
