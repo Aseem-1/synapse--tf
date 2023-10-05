@@ -35,13 +35,14 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "example" {
 }
 
 
-resource "azurerm_synapse_workspace" "example" {
+resource "azurerm_synapse_workspace" "example777908" {
   name                                 = "example777908"
   resource_group_name                  = azurerm_resource_group.example.name
   location                             = azurerm_resource_group.example.location
   storage_data_lake_gen2_filesystem_id = azurerm_storage_data_lake_gen2_filesystem.example.id
   sql_administrator_login              = "sqladminuser"
   sql_administrator_login_password     = "H@Sh1CoR3!"
+  managed_virtual_network_enabled      = true
 
 
 
@@ -62,7 +63,7 @@ resource "azurerm_synapse_workspace" "example" {
 }
 resource "azurerm_synapse_sql_pool" "anprdevsqlpool" {
   name                 = "anprdevsqlpool"
-  synapse_workspace_id = azurerm_synapse_workspace.example.id
+  synapse_workspace_id = azurerm_synapse_workspace.example777908.id
   sku_name             = "DW100c"
   create_mode          = "Default"
   storage_account_type = "GRS"
