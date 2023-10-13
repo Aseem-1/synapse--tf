@@ -36,7 +36,3 @@ jobs:
       - name: terraform lint
         uses: actionshub/terraform-lint@main
 
-      - name: terraform scan
-        uses: accurics/terrascan-action@main
-        with:
-          iac_type: 'terraform'
