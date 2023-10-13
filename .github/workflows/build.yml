@@ -36,3 +36,5 @@ jobs:
       - name: terraform lint
         uses: actionshub/terraform-lint@main
 
+      - name: terraform plan
+        run: terraform plan
