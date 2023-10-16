@@ -62,7 +62,8 @@ variable "type" {
 
 variable "azure_tenant_id" {
      type        = string
- }
+     default = "6f1a44dc-99c5-462d-b27d-4a6926a6b3e0"
+}
 
 variable "subscription_id" {
      type        = string
