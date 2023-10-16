@@ -43,7 +43,7 @@ variable "sql_administrator_login_password" {
 
 variable "account_tier" {
   type        = string
-  default = "standard"
+  default = "Standard"
   description = "Defines the Tier to use for this storage account."
 }
 
@@ -67,8 +67,10 @@ variable "is_hns_enabled" {
 
 variable "type" {
   type        = string
+  default = "SystemAssigned"
   description = "identity type of the azurerm_synapse_workspace"
 }
+
 
 variable "azure_tenant_id" {
      type        = string
