@@ -10,27 +10,27 @@ variable "location" {
   description = "location of the resource group"
 }
 
-variable "storageaccountname" {
+variable "storageaccount" {
   type        = string
-  default = "synapse_storage"
+  default = "stgaccname6578493"
   description = "name of the azurerm_storage_account"
 }
 
 variable "datalake_name" {
   type        = string
-  default = "storage_lake"
+  default = "storagelake6578493"
   description = "name of the azurerm_storage_data_lake_gen2_filesystem"
 }
 
 variable "synapse_name" {
   type        = string
-  default = "synapse_workspace"
+  default = "synapseworkspace6578493"
   description = "name of the azurerm_synapse_workspace"
 }
 
 variable "sql_administrator_login" {
   type        = string
-  default = "Synapse_test"
+  default = "Synapsetest6578493"
   description = "login of the sql_administrator"
 }
 

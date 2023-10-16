@@ -1,5 +1,5 @@
-resource "azurerm_storage_account" "sa" {
-  name                     = var.storageaccountname
+resource "azurerm_storage_account" "storageaccount" {
+  name                     = var.storageaccount
   resource_group_name      = var.resource_group_name
   location                 = var.location
   account_tier             = var.account_tier
@@ -26,5 +26,5 @@ resource "azurerm_synapse_workspace" "synapse" {
 
 resource "azurerm_storage_data_lake_gen2_filesystem" "datalake" {
   name               = var.datalake_name
-  storage_account_id = azurerm_storage_account.sa.id
+  storage_account_id = azurerm_storage_account.storageaccount.id
 }
