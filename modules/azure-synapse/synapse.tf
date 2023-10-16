@@ -21,7 +21,7 @@ resource "azurerm_synapse_workspace" "synapse" {
   identity {
     type = "SystemAssigned"
   }
-  
+
 }
 
 resource "azurerm_storage_data_lake_gen2_filesystem" "datalake" {

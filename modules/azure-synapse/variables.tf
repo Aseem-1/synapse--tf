@@ -5,7 +5,7 @@ variable "resource_group_name" {
 
 variable "location" {
   type        = string
-    description = "location of the resource group"
+  description = "location of the resource group"
 }
 
 variable "storageaccount" {
@@ -30,7 +30,7 @@ variable "sql_administrator_login" {
 
 variable "sql_administrator_login_password" {
   type        = string
-  sensitive = true
+  sensitive   = true
   description = "password of the sql_administrator"
 }
 
@@ -61,13 +61,13 @@ variable "type" {
 
 
 variable "azure_tenant_id" {
-     type        = string
+  type = string
 }
 
 variable "subscription_id" {
-     type        = string
+  type = string
 }
 
 variable "client_id" {
-    type = string
+  type = string
 }
